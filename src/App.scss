@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif ;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        input{
+            width: 100%;
+        }
+        button{
+            padding: 15px;
+            border:none;
+            width: 20vw;
+        }
+    }
+    .display-container{
+        width: 100%;
+    }
+}
