@@ -1,33 +1,143 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto",sans-serif ;
+    font-family: "Roboto", sans-serif;
 }
 
-.app{
+.app {
     display: flex;
     flex-direction: column;
     width: 80vw;
     align-items: center;
     gap: 20px;
     margin: auto;
+    padding: 30px;
 
-    .form{
+    .form {
         display: flex;
         flex-direction: column;
         width: 100%;
         gap: 10px;
-        input{
+
+        input {
             width: 100%;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
         }
-        button{
-            padding: 15px;
-            border:none;
+
+        button {
+            padding: 10px 15px;
+            border: none;
             width: 20vw;
+            border: 1px solid black;
+            border-radius: 5px;
+            background: black;
+            color: white;
+        }
+
+        .error {
+            color: red;
+            text-align: right;
         }
     }
-    .display-container{
+
+    .display-container {
         width: 100%;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 220px);
+
+        .card-container {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+
+            .card {
+                width: 100%;
+                flex-direction: column;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 5px;
+                gap: 5px;
+
+                span {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    width: 100%;
+                    gap: 10px;
+                    justify-content: space-between;
+
+                    p:nth-child(odd) {
+                        font-weight: bold;
+                    }
+                }
+
+            }
+        }
+
+        .box {
+            padding: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input {
+                border: none;
+                outline: none;
+                padding: 0;
+            }
+
+            button {
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                background: black;
+                color: white;
+            }
+
+            .form-row {
+                padding: 5px;
+                border: 1px solid black;
+                border-radius: 5px;
+                align-items: center;
+                display: flex;
+                gap: 10px;
+            }
+        }
     }
+
+    .loder {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+        color: black;
+        height: 100vh;
+    }
+
+    .loading {
+        height: fit-content;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+        color: black;
+        border: none;
+        background: none;
+        font-size: 90px;
+    }
+
 }
